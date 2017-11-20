@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    tools:context="com.example.alexander.testwifiscan.MainActivity">
+
+    <TextView
+        android:id="@+id/total_scan_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wifi scan 'onReceive' count:"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"/>
+    
+    <TextView
+        android:id="@+id/total_scan_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/total_scan_title"
+        android:layout_alignBaseline="@+id/total_scan_title"
+        android:layout_marginStart="20dp"
+        tools:text="0"/>
+
+    <TextView
+        android:id="@+id/avg_scan_count_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Average hidden networks found:"
+        android:layout_below="@+id/total_scan_title"
+        android:layout_alignStart="@+id/total_scan_title"
+        android:layout_marginTop="12dp"/>
+
+    <TextView
+        android:id="@+id/avg_scan_count_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/avg_scan_count_title"
+        android:layout_alignBaseline="@+id/avg_scan_count_title"
+        android:layout_marginStart="20dp"
+        android:singleLine="true"
+        android:ellipsize="end"
+        tools:text="0"/>
+    
+    <ListView
+        android:id="@+id/hidden_network_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/avg_scan_count_title">
+    </ListView>
+
+</RelativeLayout>
